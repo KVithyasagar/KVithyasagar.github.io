@@ -1,0 +1,136 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+    color: #0277bd;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#app-root {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    min-height: 90vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+input[type="text"], input[type="password"], input[type="number"], select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b2ebf2;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+button:active { transform: scale(0.98); }
+
+/* Main App Buttons */
+.btn-primary {
+    background: #0288d1;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 24px;
+    cursor: pointer;
+    background: #00bcd4;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+input[type="file"] { display: none; }
+
+/* Game Interface */
+.ghost-text-area {
+    font-size: 24px; /* Larger for tablet reading */
+    line-height: 1.6;
+    padding: 20px;
+    background: #fafafa;
+    border: 2px solid #b3e5fc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    white-space: pre-wrap;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    background: #e1f5fe;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.control-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* List View */
+.list-container {
+    max-height: 50vh;
+    overflow-y: auto;
+    border: 1px solid #b2ebf2;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.list-item label {
+    flex: 1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Tablet Optimizations */
+@media (max-width: 768px) {
+    #app-root { width: 95%; padding: 10px; }
+    .ghost-text-area { font-size: 20px; padding: 15px; }
+    .control-bar { gap: 5px; }
+}
